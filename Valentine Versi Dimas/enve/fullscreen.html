@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fullscreen Message</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Lily+Script+One&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #fae1dd;
+        margin: 0;
+      }
+
+      .fullscreen-message {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+      }
+      #message {
+        font-family: "Caveat", serif;
+      }
+
+      .fullscreen-message .text {
+        padding: 1rem 2rem;
+        font-size: 2.8rem;
+        max-width: 90%;
+        max-height: 90%;
+        overflow-y: auto;
+        font-family: "Brush Script MT", cursive;
+        text-align: center;
+        line-height: 1.5;
+        background-color: #eae2b7;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+      }
+
+      @media (max-width: 768px) {
+        .fullscreen-message .text {
+          font-size: 2rem;
+          padding: 1rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .fullscreen-message .text {
+          font-size: 1.5rem;
+          padding: 0.5rem;
+        }
+      }
+
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+    </style>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var audio = document.querySelector("audio");
+        if (audio.paused) {
+          audio.play();
+        }
+      });
+    </script>
+  </head>
+
+  <body>
+    <audio autoplay loop>
+      <source src="/enve/Glue Song.mp3" type="audio/mp3" />
+    </audio>
+    <div class="fullscreen-message">
+      <div class="text fullscreen">
+        <h4>Dibaca Ya Nalaaa</h4>
+        <p id="message">
+          pesan Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+          Reiciendis optio iste iure eaque ea officiis consequatur deleniti,
+          perferendis totam. Dolores asperiores itaque maiores, pariatur,
+          aliquid beatae voluptates impedit aperiam libero delectus architecto
+          sequi accusantium reiciendis, saepe veniam cupiditate dolor eveniet
+          animi? Tenetur aperiam quasi, atque neque dignissimos sed dolor
+          pariatur.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
